@@ -38,7 +38,7 @@ public class BoardTest {
 
     @Test
     public void board1x1WithAliveCellShouldRemainDeadCell() {
-        String state = new Board(Cases.board_1x1_all_dead_cells).next().state();
+        String state = new Board(Cases.board_1x1_with_alive_cell).next().state();
         assertThat(state).isEqualTo(Cases.board_1x1_all_dead_cells);
     }
 
