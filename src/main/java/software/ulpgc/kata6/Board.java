@@ -1,6 +1,8 @@
 package software.ulpgc.kata6;
 
 import java.util.List;
+
+import static java.lang.String.join;
 import static java.lang.String.valueOf;
 import static java.util.Arrays.stream;
 import static java.util.stream.Collectors.joining;
@@ -50,6 +52,10 @@ public class Board {
         return (int) neighborsOf(i,j).stream()
                 .filter(CheckAlive::check)
                 .count();
+    }
+
+    public String state() {
+        return join(lineBreak, state);
     }
 
     private interface CheckAlive {
